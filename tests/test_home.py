@@ -10,5 +10,3 @@ def test_home_page_loads(page, app_url):
 
     expect(page).to_have_title("Your Store")
 
-git config --global user.name "mayursarvankar-creator"
-git config --global user.email "mayursarvankar@gmail.com
