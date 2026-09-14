@@ -8,5 +8,5 @@ def test_home_page_loads(page, app_url):
 
     print(page.title())
 
-    expect(page).to_have_title("Your Store")
+    expect(page).to_have_title("mayur Your Store")
 
