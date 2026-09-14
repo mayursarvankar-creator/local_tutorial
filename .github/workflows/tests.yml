@@ -26,6 +26,7 @@ jobs:
         run: python3 -m playwright install --with-deps
 
       - name: Run Pytest
-        run: python3 -m pytest -v -s tests/test_home.py 
+        run: python3 -m pytest -v -s tests/test_home.py  --html=reports/report.html --self-contained-html
+
 
 
