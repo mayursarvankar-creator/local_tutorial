@@ -1,0 +1,31 @@
+name: SDET Automation Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browsers
+        run: python3 -m playwright install --with-deps
+
+      - name: Run Pytest
+        run: python3 -m pytest -v -s tests/test_home.py 
+
+
