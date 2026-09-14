@@ -33,7 +33,7 @@ jobs:
           TEST_EMAIL: ${{ secrets.TEST_EMAIL }}
           TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
 
-        run: python3 -m pytest -v -s tests/test_home.py --html=reports/report.html --self-contained-html
+        run: python3 -m pytest -v -s tests/test_login.py --html=reports/report.html --self-contained-html
 
       - name: Upload test report
         uses: actions/upload-artifact@v4
